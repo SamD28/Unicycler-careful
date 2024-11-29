@@ -225,7 +225,7 @@ def build_spades_command(spades_path, spades_dir, threads, kmers, i, short1, sho
     if spades_version.startswith("4."):
         command += ['--gfa11']
     if i == 0:  # first k-mer
-        command += ['--isolate']
+        command += ['--careful']
         if using_paired_reads:
             command += ['-1', short1, '-2', short2]
         if using_unpaired_reads:
